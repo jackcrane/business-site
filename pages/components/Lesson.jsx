@@ -1,10 +1,9 @@
-import type { NextPage } from "next";
 import styles from "../../styles/Lesson.module.css";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 
-const Lesson: NextPage = (props) => {
+const Lesson = (props) => {
   const router = useRouter();
   const [content, setContent] = useState({});
   useEffect(() => {
@@ -12,8 +11,6 @@ const Lesson: NextPage = (props) => {
       if (router.query.lessonid) {
         const d = await fetch(`/api/lesson/${router.query.lessonid}/content`);
         const j = await d.json();
-        console.log(j);
-        console.log(new Date(j.timestamp));
         setContent(j);
       }
     })();

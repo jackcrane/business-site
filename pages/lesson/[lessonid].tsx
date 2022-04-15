@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import NavBar from "../components/NavBar";
 import SideNav from "../components/SideNav";
 import Lesson from "../components/Lesson";
 import Quiz from "../components/Quiz";
