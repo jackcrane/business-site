@@ -2,6 +2,7 @@ import { MongoClient, ObjectID } from "mongodb";
 import nextConnect from "next-connect";
 
 const MongoDBHandler = async () => {
+  // @ts-ignore
   const client = new MongoClient(process.env.DB_CONN_STR, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
