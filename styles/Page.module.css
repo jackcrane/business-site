@@ -1,0 +1,14 @@
+.bg {
+  background-color: #023047;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.main {
+  border-radius: 10px;
+  background-color: #fbfcff;
+  margin: 5px;
+  padding: 20px;
+  flex-grow: 1;
+}

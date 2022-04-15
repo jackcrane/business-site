@@ -1,0 +1,51 @@
+.main {
+  font-family: "inter", sans-serif;
+}
+.main h1,
+.main h2,
+.main h3 {
+  font-family: "raleway", sans-serif;
+}
+.main .titleBlock {
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.main .titleBlock h1 {
+  font-size: 50px;
+  font-weight: 300;
+  margin: 0;
+}
+.main .titleBlock h2 {
+  margin: 0;
+}
+.main hr {
+  border: none;
+  border-top: 2px solid black;
+  margin: 20px 0;
+}
+.main video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: auto 0px;
+}
+.main .text {
+  font-weight: 100;
+  margin: 0;
+}
+.main .text h1 {
+  font-size: 30px;
+  font-weight: 300;
+}
+.main .text h2 {
+  font-size: 20px;
+}
+.main .text h3 {
+  font-size: 18px;
+}
+.main .text p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
