@@ -1,0 +1,33 @@
+.main {
+  font-family: "inter", sans-serif;
+  overflow: scroll;
+  height: 100%;
+}
+.main h1,
+.main h2,
+.main h3 {
+  font-family: "raleway", sans-serif;
+}
+.main h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0;
+}
+.main hr {
+  border: none;
+  border-top: 2px solid black;
+  margin: 20px 0;
+}
+.submit {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "inter" sans-serif;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background-color: #fb8500;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

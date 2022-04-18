@@ -24,10 +24,6 @@ const Lesson = (props) => {
           {content.author} \ {new Date(content.timestamp).toDateString()}
         </h2>
       </div>
-      <video controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" />
-      </video>
-      <hr />
       <ReactMarkdown className={styles.text}>{content.text}</ReactMarkdown>
     </article>
   );

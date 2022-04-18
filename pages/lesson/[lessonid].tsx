@@ -10,8 +10,10 @@ const Page: NextPage = () => {
     <div className={styles.bg}>
       <SideNav />
       <div className={styles.main}>
-        <Lesson />
-        <Quiz />
+        <Lesson className={styles.lesson} />
+        <div className={styles.quiz}>
+          <Quiz />
+        </div>
       </div>
     </div>
   );

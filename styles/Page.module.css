@@ -11,4 +11,12 @@
   margin: 5px;
   padding: 20px;
   flex-grow: 1;
+  flex-direction: row;
+  display: flex;
+}
+.quiz {
+  margin-left: 10px;
+  padding-left: 10px;
+  min-width: 300px;
+  border-left: 2px solid black;
 }
