@@ -1,10 +1,9 @@
-import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Question from "./Question";
 import styles from "../../styles/Quiz.module.css";
 
-const Quiz: NextPage = (props) => {
+const Quiz = (props) => {
   const router = useRouter();
   const [content, setContent] = useState({});
   useEffect(() => {
