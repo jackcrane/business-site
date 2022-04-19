@@ -19,7 +19,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/components/Lesson.jsx"
+    "pages/components/Lesson.jsx",
+    "pages/components/Quiz.jsx"
   ],
   "exclude": ["node_modules"]
 }
