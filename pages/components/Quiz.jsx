@@ -26,17 +26,22 @@ const Quiz = (props) => {
 
   return (
     <section className={styles.main}>
-      <h1>Test your understanding</h1>
-      <hr></hr>
-      {content.quiz &&
-        content.quiz.map((e, i) => (
-          <div key={i}>
-            <Question q={e} key={i} onAnswer={(d) => onAnswer(d, i)} />
-          </div>
-        ))}
-      <p>
-        <button className={styles.submit}>Grade</button>
-      </p>
+      {content.quiz ? (
+        <>
+          <h1>Test your understanding</h1>
+          <hr />
+          {content.quiz.map((e, i) => (
+            <div key={i}>
+              <Question q={e} key={i} onAnswer={(d) => onAnswer(d, i)} />
+            </div>
+          ))}
+          <p>
+            <button className={styles.submit}>Grade</button>
+          </p>
+        </>
+      ) : (
+        <p>Loading...</p>
+      )}
     </section>
   );
 };

@@ -11,12 +11,10 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const db = await database();
-  console.log(req.query);
   let doc = await db.db
     .collection("lessons")
     // @ts-ignore
     .findOne(new db.ObjectID(req.query.id));
-  console.log(doc);
   // @ts-ignore
   res.status(200).json(doc);
 }

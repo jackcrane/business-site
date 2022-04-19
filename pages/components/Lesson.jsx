@@ -18,13 +18,21 @@ const Lesson = (props) => {
 
   return (
     <article className={styles.main}>
-      <div className={styles.titleBlock}>
-        <h1>{content.title}</h1>
-        <h2>
-          {content.author} \ {new Date(content.timestamp).toDateString()}
-        </h2>
-      </div>
-      <ReactMarkdown className={styles.text}>{content.text}</ReactMarkdown>
+      {content.author ? (
+        <>
+          <div className={styles.titleBlock}>
+            <h1>{content.title}</h1>
+            <h2>
+              {content.author} \ {new Date(content.timestamp).toDateString()}
+            </h2>
+          </div>
+          <ReactMarkdown className={styles.text}>{content.text}</ReactMarkdown>
+        </>
+      ) : (
+        <>
+          <p>Loading...</p>
+        </>
+      )}
     </article>
   );
 };

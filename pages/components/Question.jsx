@@ -5,34 +5,40 @@ import styles from "../../styles/Forms.module.css";
 const Question = (props) => {
   const [uuid, setuuid] = useState(uuidv4());
   return (
-    <div className="question">
-      <p className={styles.question}>{props.q.question}</p>
-      {props.q.type == "multiple" ? (
-        <div className="answers">
-          {props.q.options.map((a, i) => (
-            <RadioGroup
-              key={i}
-              a={a}
-              i={i}
-              questionID={uuid}
-              onAnswer={props.onAnswer}
-            />
-          ))}
+    <>
+      {props.q?.question ? (
+        <div className="question">
+          <p className={styles?.question}>{props.q?.question}</p>
+          {props.q.type == "multiple" ? (
+            <div className="answers">
+              {props.q.options?.map((a, i) => (
+                <RadioGroup
+                  key={i}
+                  a={a}
+                  i={i}
+                  questionID={uuid}
+                  onAnswer={props.onAnswer}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="answer">
+              <input
+                type="text"
+                name={uuid}
+                placeholder="Answer..."
+                className={styles.textInput}
+                onInput={(e) => {
+                  props.onAnswer(e.target.value === props.q.correct);
+                }}
+              />
+            </div>
+          )}
         </div>
       ) : (
-        <div className="answer">
-          <input
-            type="text"
-            name={uuid}
-            placeholder="Answer..."
-            className={styles.textInput}
-            onInput={(e) => {
-              props.onAnswer(e.target.value === props.q.correct);
-            }}
-          />
-        </div>
+        <></>
       )}
-    </div>
+    </>
   );
 };
 

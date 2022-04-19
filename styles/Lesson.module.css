@@ -1,6 +1,6 @@
 .main {
   font-family: "inter", sans-serif;
-  overflow: scroll;
+  overflow: auto;
   height: 100%;
 }
 .main h1,

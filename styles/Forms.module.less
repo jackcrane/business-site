@@ -1,10 +1,20 @@
 @import "./Variables.less";
 
 .textInput {
-  font-size: 16px;
   font-family: "inter" sans-serif;
   width: 100%;
   padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  box-sizing: border-box;
+  background-color: @tan;
+  &:active,
+  &:focus {
+    outline: none;
+    background-color: darken(@tan, 10%);
+  }
 }
 
 .question {
