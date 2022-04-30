@@ -45,8 +45,8 @@ const Home = () => {
           </h1>
         </div>
         <div className={styles.links}>
-          {lessons.map((lesson) => (
-            <Link href={`/lesson/${lesson.id}`}>
+          {lessons.map((lesson, i) => (
+            <Link href={`/lesson/${lesson.id}`} key={i}>
               <p>{lesson.title}</p>
             </Link>
           ))}
