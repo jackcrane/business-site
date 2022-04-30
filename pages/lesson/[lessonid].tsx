@@ -11,9 +11,9 @@ const Page: NextPage = () => {
       <SideNav />
       <div className={styles.main}>
         <Lesson className={styles.lesson} />
-        <div className={styles.quiz}>
+        {/* <div className={styles.quiz}>
           <Quiz />
-        </div>
+        </div> */}
       </div>
     </div>
   );
